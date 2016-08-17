@@ -19,10 +19,10 @@ describe('TodoList',() => {
     }, {
       id: 2,
       text: 'Do something else'
-    }]
+    }];
     var todoList = TestUtils.renderIntoDocument(<TodoList todos={todos} />);
     var todosComponents = TestUtils.scryRenderedComponentsWithType(todoList, Todo);
 
-    expect(todosComponents.length).toBe(2);
+    expect(todosComponents.length).toBe(todos.length);
   });
 });
